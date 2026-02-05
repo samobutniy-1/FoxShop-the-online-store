@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ <symbol id="cart" viewBox="0 0 24 24">
+  <path d="M7.5 18c0.8284 0 1.5 0.6716 1.5 1.5s-0.6716 1.5-1.5 1.5-1.5-0.6716-1.5-1.5 0.6716-1.5 1.5-1.5z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  <path d="M16.5 18c0.8284 0 1.5 0.6716 1.5 1.5s-0.6716 1.5-1.5 1.5-1.5-0.6716-1.5-1.5 0.6716-1.5 1.5-1.5z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  <path d="M11 9h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M2 3l0.2649 0.0883c1.32 0.44 1.98 0.66 2.3575 1.1838 0.3775 0.5237 0.3775 1.2195 0.3775 2.6109v2.6171c0 2.8284 0 4.2426 0.8787 5.1213 0.8787 0.8787 2.2929 0.8787 5.1213 0.8787h2m6-0.5h-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M5 6h3m-3 7h10.5218c0.9594 0 1.4391 0 1.8148-0.2477 0.3757-0.2478 0.5647-0.6887 0.9426-1.5705l0.4286-1c0.8095-1.8889 1.2143-2.8333 0.7696-3.5076-0.4447-0.6742-1.4721-0.6742-3.5271-0.6742h-4.4504" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+</symbol>
+  <symbol id="close" viewBox="0 0 24 24">
+    <path d="M18 18l-6-6m0 0l-6-6m6 6l6-6m-6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>

@@ -1,0 +1,86 @@
+@use "utils/variables" as *;
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: $primary-color;
+  color: $primary-color-light;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    block-size: 50px;
+    align-items: center;
+    gap: 30px;
+  }
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &__logo {
+    color: $primary-color-light;
+    font-weight: 700;
+  }
+  &__img {
+    width: 50px;
+  }
+
+  &__input {
+    margin-left: auto;
+    border-radius: 15px;
+    height: 25px;
+    padding: 15px;
+  }
+  &__buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &__cart-open-button {
+    position: relative;
+    background-color: transparent;
+    span {
+      display: none;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $secondary-color;
+      top: 2px;
+      right: 0;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+  }
+
+  &__icon-cart {
+    width: 35px;
+    height: 35px;
+    color: $primary-color-light;
+    fill: none;
+  }
+  &__burger {
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  &__line {
+    background-color: $primary-color-light;
+    width: 25px;
+    height: 3px;
+    border-radius: 15px;
+  }
+  &__line--short {
+    width: 20px;
+    align-self: end;
+  }
+
+  @media (max-width: 780px) {
+    display: flex;
+  }
+}

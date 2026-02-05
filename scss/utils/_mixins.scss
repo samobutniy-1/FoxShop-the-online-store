@@ -1,0 +1,27 @@
+@mixin textClamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin button($color, $bgcolor) {
+  color: $color;
+  background-color: $bgcolor;
+  border: 2px solid transparent;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.2s;
+  &:hover {
+    background-color: transparent;
+    color: $bgcolor;
+    border: 2px solid $bgcolor;
+  }
+  &:active {
+    color: $color;
+    background-color: $bgcolor;
+    transform: translate(0, 2px);
+  }
+}
