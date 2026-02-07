@@ -65,7 +65,7 @@ const renderProducts = async () => {
     //Setting values
     image.src = item.image;
     title.textContent = item.title;
-    price.textContent = `$${item.price}`;
+    price.textContent = `$${item.price.toFixed(2)}`;
     AddBtn.textContent = "Add to cart";
     anchor.href = "/"; // змінити на картку товару
     AddBtn.addEventListener("click", () => {
@@ -187,7 +187,7 @@ const totalPrice = function () {
 
     const counter = cart.reduce(
       (acc, cur) => acc + cur.price * cur.quantity,
-      0
+      0,
     );
     const formatted = counter.toFixed(2);
     totalAmount.textContent = `$${formatted}`;

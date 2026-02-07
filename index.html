@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,113 +12,6 @@
     <title>FoxShop</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="header__container">
-          <a href="/" class="header__logo-container"
-            ><p class="header__logo">FoxShop</p>
-            <img class="header__img" src="./images/fox-logo.png" alt="logo"
-          /></a>
-          <input
-            type="text"
-            class="header__input"
-            placeholder="I am looking for.."
-          />
-          <div class="header__buttons">
-            <button type="button" class="header__cart-open-button">
-              <svg class="header__icon-cart">
-                <use href="images/svg/sprite.svg#cart"></use>
-              </svg>
-              <span class="indicator"></span>
-            </button>
-            <button
-              type="button"
-              class="header__burger burger"
-              onclick="openSidebar()"
-            >
-              <span class="burger__line"></span>
-              <span class="burger__line burger__line--short"></span>
-              <span class="burger__line"></span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <div class="content__container">
-        <div class="burger-menu"></div>
-
-        <aside class="sidebar">
-          <nav class="sidebar__nav navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item navigation__item--active">
-                <a href="/">Home</a>
-              </li>
-              <li class="navigation__item">
-                <button type="button" class="navigation__dropdown-btn">
-                  <span>Categories</span>
-                  <svg
-                    id="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="black"
-                  >
-                    <path
-                      d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"
-                    />
-                  </svg>
-                </button>
-                <ul class="navigation__dropdown-list">
-                  <li><a href="#">Category 1</a></li>
-                  <li><a href="#">Category 2</a></li>
-                  <li><a href="#">Category 3</a></li>
-                  <li><a href="#">Category 4</a></li>
-                </ul>
-              </li>
-              <li class="navigation__item"><a href="/">About Us</a></li>
-              <li class="navigation__item"><a href="/">Best Sellers</a></li>
-              <li class="navigation__item"><a href="/">Special Offers</a></li>
-              <li class="navigation__item"><a href="/">Contact</a></li>
-            </ul>
-          </nav>
-        </aside>
-        <main class="main">
-          <section class="goods-section">
-            <ul class="goods-section__list"></ul>
-          </section>
-        </main>
-      </div>
-
-      <footer class="footer"></footer>
-    </div>
-    <div class="modal">
-      <div class="modal__content">
-        <h2 class="modal__title">Your cart</h2>
-        <button type="button" class="modal__cart-close-button">
-          <svg class="modal__icon-close">
-            <use href="images/svg/sprite.svg#close"></use>
-          </svg>
-        </button>
-        <div class="modal__empty-cart empty-cart">
-          <h3 class="empty-cart__title">Your cart is empty</h3>
-          <img
-            src="./images/empty-cart-image.png"
-            alt="Your cart is empty"
-            class="empty-cart__image"
-          />
-          <p class="empty-cart__messagge">but you can change it :3</p>
-        </div>
-        <div class="modal__full-cart">
-          <ul class="modal__list"></ul>
-          <div class="modal__total-price total-price">
-            <p class="total-price__text">Total price:</p>
-            <span class="total-price__amount"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="./js/script.js"></script>
   </body>
 </html>
