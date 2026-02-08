@@ -1,5 +1,5 @@
 import { Header } from "../header/Header";
-import { Products } from "../products/Products";
+import { Content } from "../content/Content";
 
 export function HomePage() {
   return (
@@ -7,7 +7,7 @@ export function HomePage() {
       <div className="wrapper">
         <Header />
 
-        <Products />
+        <Content />
 
         <footer className="footer"></footer>
       </div>
