@@ -1,4 +1,4 @@
-export function Header() {
+export function Header({ openCart }) {
   return (
     <>
       <header className="header">
@@ -13,7 +13,11 @@ export function Header() {
             placeholder="I am looking for.."
           />
           <div className="header__buttons">
-            <button type="button" className="header__cart-open-button">
+            <button
+              type="button"
+              className="header__cart-open-button"
+              onClick={openCart}
+            >
               <svg className="header__icon-cart">
                 <use href="svg/sprite.svg#cart"></use>
               </svg>
