@@ -19,11 +19,7 @@ export function Header() {
               </svg>
               <span className="indicator"></span>
             </button>
-            <button
-              type="button"
-              className="header__burger burger"
-              // onclick="openSidebar()"
-            >
+            <button type="button" className="header__burger burger">
               <span className="burger__line"></span>
               <span className="burger__line burger__line--short"></span>
               <span className="burger__line"></span>
