@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export function Goods() {
+export function Goods({ addToCart }) {
   const [goods, setGoods] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,12 @@ export function Goods() {
                   </article>
                   <div className="item__actions">
                     <p className="item__price">${good.price.toFixed(2)}</p>
-                    <button className="item__add-button">Add to cart</button>
+                    <button
+                      className="item__add-button"
+                      onClick={() => addToCart(good)}
+                    >
+                      Add to cart
+                    </button>
                   </div>
                 </li>
               );

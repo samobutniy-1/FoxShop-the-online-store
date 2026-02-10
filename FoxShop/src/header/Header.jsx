@@ -1,4 +1,4 @@
-export function Header({ openCart }) {
+export function Header({ openCart, cart }) {
   return (
     <>
       <header className="header">
@@ -21,7 +21,10 @@ export function Header({ openCart }) {
               <svg className="header__icon-cart">
                 <use href="svg/sprite.svg#cart"></use>
               </svg>
-              <span className="indicator"></span>
+              <span
+                className="indicator"
+                style={{ display: cart.length > 0 ? "block" : "none" }}
+              ></span>
             </button>
             <button type="button" className="header__burger burger">
               <span className="burger__line"></span>
