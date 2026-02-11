@@ -5,23 +5,25 @@ import { Cart } from "../content/cart/Cart";
 import { useState } from "react";
 
 export function HomePage() {
+  const [goods, setGoods] = useState([]);
+  const [filteredGoods, setFilteredGoods] = useState([]);
   const [isCartOpened, setIsCartOpened] = useState(false);
 
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
+  const addToCart = (good) => {
     setCart((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
+      const existing = prev.find((item) => item.id === good.id);
 
       if (existing) {
         return prev.map((item) => {
-          return item.id === product.id
+          return item.id === good.id
             ? { ...item, quantity: item.quantity + 1 }
             : item;
         });
       }
 
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...good, quantity: 1 }];
     });
   };
 
@@ -35,9 +37,17 @@ export function HomePage() {
           isCartOpened={setIsCartOpened}
           openCart={openCart}
           cart={cart}
+          setCart={setCart}
+          goods={goods}
+          setFilteredGoods={setFilteredGoods}
         />
 
-        <Content addToCart={addToCart} />
+        <Content
+          addToCart={addToCart}
+          setGoods={setGoods}
+          filteredGoods={filteredGoods}
+          setFilteredGoods={setFilteredGoods}
+        />
 
         <footer className="footer"></footer>
       </div>

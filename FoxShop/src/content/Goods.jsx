@@ -1,13 +1,17 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-export function Goods({ addToCart }) {
-  const [goods, setGoods] = useState([]);
-
+export function Goods({
+  addToCart,
+  setGoods,
+  filteredGoods,
+  setFilteredGoods,
+}) {
   useEffect(() => {
     const fetchGoods = async () => {
       const response = await axios.get("https://fakestoreapi.com/products");
       setGoods(response.data);
+      setFilteredGoods(response.data);
     };
 
     fetchGoods();
@@ -17,7 +21,7 @@ export function Goods({ addToCart }) {
       <main className="main">
         <section className="goods-section">
           <ul className="goods-section__list">
-            {goods.map((good) => {
+            {filteredGoods.map((good) => {
               return (
                 <li key={good.id} className="goods-section__item item">
                   <article className="item__article">
