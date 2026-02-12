@@ -9,7 +9,10 @@ export function HomePage() {
   const [filteredGoods, setFilteredGoods] = useState([]);
   const [isCartOpened, setIsCartOpened] = useState(false);
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   const addToCart = (good) => {
     setCart((prev) => {

@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export function Cart({ isCartOpened, openCart, cart, setCart }) {
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   const changeQuantity = (id, newQuantity) => {
     if (newQuantity < 1) return;
 
