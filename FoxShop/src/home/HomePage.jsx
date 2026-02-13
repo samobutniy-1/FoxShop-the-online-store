@@ -8,6 +8,7 @@ export function HomePage() {
   const [goods, setGoods] = useState([]);
   const [filteredGoods, setFilteredGoods] = useState([]);
   const [isCartOpened, setIsCartOpened] = useState(false);
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
@@ -37,6 +38,8 @@ export function HomePage() {
     <>
       <div className="wrapper">
         <Header
+          isCategoriesOpen={isCategoriesOpen}
+          setIsCategoriesOpen={setIsCategoriesOpen}
           isCartOpened={setIsCartOpened}
           openCart={openCart}
           cart={cart}
@@ -46,6 +49,8 @@ export function HomePage() {
         />
 
         <Content
+          isCategoriesOpen={isCategoriesOpen}
+          setIsCategoriesOpen={setIsCategoriesOpen}
           addToCart={addToCart}
           setGoods={setGoods}
           filteredGoods={filteredGoods}

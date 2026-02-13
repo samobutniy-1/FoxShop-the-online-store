@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export function Sidebar() {
-  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
-
+export function Sidebar({ isCategoriesOpen, setIsCategoriesOpen }) {
   return (
     <aside className="sidebar">
       <nav className="sidebar__nav navigation">

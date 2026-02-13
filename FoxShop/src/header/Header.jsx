@@ -1,7 +1,15 @@
 import { useState } from "react";
 
-export function Header({ openCart, cart, goods, setFilteredGoods }) {
+export function Header({
+  openCart,
+  cart,
+  goods,
+  setFilteredGoods,
+  isCategoriesOpen,
+  setIsCategoriesOpen,
+}) {
   const [search, setSearch] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const searchProduct = (e) => {
     const value = e.target.value;
@@ -15,6 +23,8 @@ export function Header({ openCart, cart, goods, setFilteredGoods }) {
 
     setFilteredGoods(filtered);
   };
+
+  const openMenu = () => setIsMenuOpen((prev) => !prev);
   return (
     <>
       <header className="header">
@@ -52,11 +62,88 @@ export function Header({ openCart, cart, goods, setFilteredGoods }) {
                   style={{ display: cart.length > 0 ? "block" : "none" }}
                 ></span>
               </button>
-              <button type="button" className="header__burger burger">
+              <button
+                type="button"
+                className="header__burger burger"
+                onClick={openMenu}
+              >
                 <span className="burger__line"></span>
                 <span className="burger__line burger__line--short"></span>
                 <span className="burger__line"></span>
               </button>
+
+              <nav
+                className={`header__menu-navigation menu-navigation ${
+                  isMenuOpen ? "menu-navigation--open" : ""
+                }`}
+              >
+                <button
+                  className="menu-navigation__close-btn"
+                  onClick={openMenu}
+                >
+                  <svg className="menu-navigation__close-icon">
+                    <use href="/svg/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <ul className="menu-navigation__list">
+                  <li className="menu-navigation__item menu-navigation__item--active">
+                    <a href="/">Home</a>
+                  </li>
+
+                  <li className="menu-navigation__item">
+                    <button
+                      type="button"
+                      className="menu-navigation__dropdown-btn"
+                      onClick={() => setIsCategoriesOpen((prev) => !prev)}
+                    >
+                      <span>Categories</span>
+                      <svg
+                        className={`menu-navigation__arrow ${
+                          isCategoriesOpen ? "rotated" : ""
+                        }`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                        height="24"
+                      >
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                      </svg>
+                    </button>
+
+                    <ul
+                      className={`menu-navigation__dropdown-list ${
+                        isCategoriesOpen ? "open" : ""
+                      }`}
+                    >
+                      <li>
+                        <a href="#">Category 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Category 2</a>
+                      </li>
+                      <li>
+                        <a href="#">Category 3</a>
+                      </li>
+                      <li>
+                        <a href="#">Category 4</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="menu-navigation__item">
+                    <a href="/">About Us</a>
+                  </li>
+                  <li className="menu-navigation__item">
+                    <a href="/">Best Sellers</a>
+                  </li>
+                  <li className="menu-navigation__item">
+                    <a href="/">Special Offers</a>
+                  </li>
+                  <li className="menu-navigation__item">
+                    <a href="/">Contact</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
