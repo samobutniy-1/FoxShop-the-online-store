@@ -1,16 +1,54 @@
-# React + Vite
+🦊 FoxShop – React Online Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FoxShop is an online store built with React, powered by Vite and styled with SCSS.
+This project showcases UI structure, state management, and shopping cart logic.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## React Compiler
+- 🛍 Product listing
+- 🔍 Search functionality
+- 🛒 Shopping cart (add/remove/change quantity)
+- 📱 Fully responsive layout
+- 🖱 Scroll lock when cart or menu is open
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+Tech Stack
+React | Vite | SCSS | ESLint + Prettier
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+!!! Notes
+
+- Product links currently refresh the page instead of routing to separate product pages.
+- Product detail pages and full routing are not implemented yet.
+
+---
+
+Getting Started
+
+Clone the repository:
+`git clone https://github.com/samobutniy-1/FoxShop-the-online-store`
+
+Install dependencies:
+`npm install`
+
+Run development server:
+`npm run dev`
+
+Open in browser: `http://localhost:5173`
+
+---
+
+Future Plans
+
+- Product detail pages & routing (React Router)
+- Enhanced search and filtering
+- User authentication and profiles
+- Possible design updates
+
+---
+
+Made with ❤️ using React & SCSS
