@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Header({
   openCart,
@@ -25,6 +25,18 @@ export function Header({
   };
 
   const openMenu = () => setIsMenuOpen((prev) => !prev);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
   return (
     <>
       <header className="header">
@@ -71,6 +83,12 @@ export function Header({
                 <span className="burger__line burger__line--short"></span>
                 <span className="burger__line"></span>
               </button>
+              {isMenuOpen && (
+                <div
+                  className="header__overlay"
+                  onClick={() => setIsMenuOpen(false)}
+                ></div>
+              )}
 
               <nav
                 className={`header__menu-navigation menu-navigation ${
