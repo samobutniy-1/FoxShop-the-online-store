@@ -14,8 +14,6 @@ Features
 
 🛒 Shopping cart (add/remove/change quantity)
 
-📱 Fully responsive layout
-
 🖱 Scroll lock when cart or menu is open
 
 
